@@ -1,16 +1,15 @@
 # Changelog — Reformation Hymnal for Projection
 
 All notable changes to the hymnal text and build outputs are documented here.
-Entries are written for worship coordinators and projection operators, not just
+Entries are written for music coordinators and projection operators, not just
 developers — if a line of a hymn changed, it belongs here.
 
 ---
 
-## [2026.06.07] — first release
+## [2026.06.08] — first release
 
 This release represents the first version of the hymnal maintained as reviewed,
-diff-tracked plain text. Every change from the original SoftProjector songbook
-is now visible in version history. Future corrections will each have their own
+diff-tracked plain text. Future corrections will each have their own
 commit with a clear description.
 
 ### Text quality improvements
@@ -30,11 +29,9 @@ commit with a clear description.
   "Choir and Miscellaneous").
 
 - **Common titles added for 47 hymns** where the hymn is widely known by a name
-  other than its first line (e.g., Hymn 1 "All People That on Earth Do Dwell" is
-  commonly known as "Old Hundredth").
+  other than its first line (e.g., Hymn 26 "We Praise Thee, O God" is
+  commonly known as "Revive Us Again").
 
-- **Tune names added for 31 hymns** where the online hymnal listed a tune name
-  not present in the original SoftProjector file.
 
 ### Lyrics corrections accepted from online reference
 
