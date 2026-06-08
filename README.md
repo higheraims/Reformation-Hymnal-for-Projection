@@ -34,11 +34,19 @@ Visit the [Releases](../../releases/latest) page to download the latest compiled
 ## About this project
 
 The hymn texts are maintained as plain-text `.hymn` files in `source/` and compiled
-into the above formats by the build scripts in `build/`. This makes every lyric
+into the above formats by the build scripts in `build/`. This makes any lyric
 change visible as a readable diff in version history.
 
 Text has been cross-checked against the online hymnal at hymnal.sdarm.org/rh.
 See `CHANGELOG.md` for a full account of corrections and intentional differences.
+
+**Versioning: CalVer (`YYYY.MM.DD`)**
+
+This project uses calendar-based versioning rather than semantic versioning.
+The "version" of a release is intrinsically the date its text was finalised.
+A user downloading `2026.06.08` immediately knows when it was published.
+
+If two releases are needed on the same day, append a counter: `2026.06.08.1`.
 
 ### Building from source
 
