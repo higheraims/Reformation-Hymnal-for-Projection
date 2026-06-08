@@ -18,13 +18,10 @@ commit with a clear description.
 - **Curly (typographic) quotes throughout.** All straight `"` and `'` characters
   in hymn texts have been replaced with proper opening and closing quotation marks
   (`"` `"`) and apostrophes/elisions (`'`). Word-initial elisions like `'tis`,
-  `'twas`, and `'neath` use the right single quote, not an opening quote — this
-  is the standard typographic convention and was the most common error in the
-  original SoftProjector file.
+  `'twas`, and `'neath` use the right single quote, not an opening quote.
 
 - **Author and composer attribution.** Author and composer names have been
-  populated for all hymns where this information was available in the source
-  SoftProjector file.
+  populated for all hymns where this information was able to be extracted.
 
 ### Metadata additions
 
