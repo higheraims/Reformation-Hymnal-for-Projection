@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reformation-hymnal"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+pdf = [
+    "pdfplumber>=0.11",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["build*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
