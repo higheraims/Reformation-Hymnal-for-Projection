@@ -52,6 +52,18 @@ CATEGORY_ID = "reformation_hymnal"
 # Default item bounding box -- matches FreeShow's native SPS import output.
 _ITEM_STYLE = "top:88px;left:50px;height:904px;width:1820px;"
 
+# Per-slide reference label ("26 · Verse 1 of 4"), small, top-right corner.
+# A separate, independently styled item so it can be restyled/removed in FreeShow.
+_REF_STYLE = "top:30px;left:1170px;height:60px;width:700px;"
+_REF_TEXT  = "font-size:40px;"
+_REF_ALIGN = "text-align:right;"
+
+# End-of-song marker, centered below the lyrics (parity with SoftProjector's "* * *").
+_END_STYLE = "top:1000px;left:50px;height:70px;width:1820px;"
+_END_TEXT  = "font-size:60px;"
+_END_ALIGN = "text-align:center;"
+_END_GLYPH = "* * *"
+
 
 def _show_id(hymn_num: int) -> str:
     return f"h{hymn_num:03d}"
@@ -73,15 +85,32 @@ def _group_label(s: Section, verse_num: int) -> str:
     return s.kind.capitalize()
 
 
+def _text_item(style: str, align: str, text_style: str, value: str) -> dict:
+    """A single-line text item following FreeShow's item shape."""
+    return {
+        "style": style,
+        "lines": [{"align": align, "text": [{"style": text_style, "value": value}]}],
+    }
+
+
 def _build_show(hymn: Hymn) -> dict:
     slides: dict[str, dict] = {}
     layout_slides: list[dict] = []
+
+    verse_count = sum(1 for s in hymn.sections if s.kind == "verse")
 
     verse_num = 0
     for i, s in enumerate(hymn.sections):
         if s.kind == "verse":
             verse_num += 1
         sid = _slide_id(hymn.number, i)
+
+        # Reference label: verses carry the "of M" count; other sections don't.
+        if s.kind == "verse":
+            ref_label = f"Verse {verse_num} of {verse_count}"
+        else:
+            ref_label = _group_label(s, verse_num)
+
         slides[sid] = {
             "group":    _group_label(s, verse_num),
             "color":    None,
@@ -94,10 +123,21 @@ def _build_show(hymn: Hymn) -> dict:
                         {"align": "", "text": [{"style": "", "value": line}]}
                         for line in s.lines
                     ],
-                }
+                },
+                _text_item(
+                    _REF_STYLE, _REF_ALIGN, _REF_TEXT,
+                    f"{hymn.number} · {ref_label}",
+                ),
             ],
         }
         layout_slides.append({"id": sid})
+
+    # End-of-song marker on the true last slide (layout order == section order).
+    if layout_slides:
+        last_sid = layout_slides[-1]["id"]
+        slides[last_sid]["items"].append(
+            _text_item(_END_STYLE, _END_ALIGN, _END_TEXT, _END_GLYPH)
+        )
 
     lid = _layout_id(hymn.number)
     return {
