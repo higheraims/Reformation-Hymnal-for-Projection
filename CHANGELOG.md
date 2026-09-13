@@ -4,6 +4,19 @@ All notable changes to the hymnal text and build outputs are documented here.
 Entries are written for music coordinators and projection operators, not just
 developers — if a line of a hymn changed, it belongs here.
 
+
+---
+
+## [2026.09.12] — update including PowerPoint set
+
+Here we release a full set of PowerPoint files, styled via two custom master slide
+layouts, "Hymn Title" and "Hymn Stanza" - stylable via a slideshow's design where
+pasted into another slideshow, the slide deck can take on the theme of the destination
+slideshow.
+
+One hymn, number 160, includes a correction to verse 2 where "thing" should
+have been "things"
+
 ---
 
 ## [2026.06.08] — first release

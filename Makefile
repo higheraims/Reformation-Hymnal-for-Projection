@@ -1,12 +1,21 @@
-.PHONY: build sps freeshow fetch enrich diff check test clean extract inspect
+.PHONY: build sps freeshow pptx template template-bootstrap fetch enrich diff check test clean extract inspect
 
-build: sps freeshow          ## build everything into dist/
+build: sps freeshow pptx     ## build everything into dist/
 
 sps:                         ## compile source/*.hymn -> dist/ReformationHymnal.sps
 	python -m build.to_softprojector
 
 freeshow:                    ## compile source/*.hymn -> dist/ReformationHymnal.project
 	python -m build.to_freeshow
+
+pptx:                        ## compile source/*.hymn -> dist/pptx/NNN.pptx (needs the pptx extra)
+	python -m build.to_pptx
+
+template:                    ## zip template/ -> dist/ReformationHymnal-template.pptx
+	python -m build.pptx_template pack
+
+template-bootstrap:          ## REGENERATE template/ from scratch, discarding edits
+	python -m build.make_template
 
 fetch:                       ## (Phase 3) download online hymnal JSON -> reference/rh_online.json
 	python -m build.fetch_online

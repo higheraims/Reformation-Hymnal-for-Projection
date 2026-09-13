@@ -18,8 +18,18 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install measurement fonts
+        # The PowerPoint build measures text to choose a stanza size. Cambria
+        # and Calibri are not redistributable, so the runner gets Google's
+        # metric-compatible Caladea and Carlito; build/to_pptx.py falls back to
+        # them by name and the fitted size comes out identical for all 700.
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            fontconfig fonts-crosextra-caladea fonts-crosextra-carlito
+
       - name: Install dependencies
-        run: pip install -e ".[dev]"
+        run: pip install -e ".[dev,pptx]"
 
       - name: Run tests
         run: make test

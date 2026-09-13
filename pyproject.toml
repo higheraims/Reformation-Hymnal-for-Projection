@@ -17,6 +17,12 @@ dev = [
 pdf = [
     "pdfplumber>=0.11",
 ]
+# Only the PowerPoint target needs these; the .sps and FreeShow builds stay
+# dependency-free. Pillow arrives with python-pptx and is what measures text
+# width when choosing a stanza font size.
+pptx = [
+    "python-pptx>=1.0",
+]
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sldMaster xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" preserve="1">
+  <p:cSld name="Reformation Hymnal">
+    <p:bg>
+      <p:bgPr>
+        <a:gradFill rotWithShape="1">
+          <a:gsLst>
+            <a:gs pos="0">
+              <a:schemeClr val="dk2">
+                <a:lumMod val="110000"/>
+              </a:schemeClr>
+            </a:gs>
+            <a:gs pos="55000">
+              <a:schemeClr val="dk2">
+                <a:lumMod val="65000"/>
+              </a:schemeClr>
+            </a:gs>
+            <a:gs pos="100000">
+              <a:schemeClr val="dk2">
+                <a:lumMod val="35000"/>
+              </a:schemeClr>
+            </a:gs>
+          </a:gsLst>
+          <a:lin ang="5400000" scaled="0"/>
+        </a:gradFill>
+        <a:effectLst/>
+      </p:bgPr>
+    </p:bg>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="Title Placeholder 1"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr>
+            <p:ph type="title" hasCustomPrompt="1"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="317500" y="558800"/>
+            <a:ext cx="11557000" cy="1905000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr vert="horz" lIns="45720" tIns="45720" rIns="45720" bIns="45720" anchor="ctr" anchorCtr="0" wrap="square">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle>
+            <a:lvl1pPr marL="0" indent="0" algn="ctr">
+              <a:lnSpc>
+                <a:spcPct val="100000"/>
+              </a:lnSpc>
+              <a:buNone/>
+              <a:defRPr sz="4400" kern="1200">
+                <a:solidFill>
+                  <a:schemeClr val="lt1"/>
+                </a:solidFill>
+                <a:latin typeface="+mj-lt"/>
+              </a:defRPr>
+            </a:lvl1pPr>
+          </a:lstStyle>
+          <a:p/>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Text Placeholder 2"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr>
+            <p:ph type="body" idx="1" hasCustomPrompt="1"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="317500" y="2667000"/>
+            <a:ext cx="11557000" cy="3632200"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr vert="horz" lIns="45720" tIns="45720" rIns="45720" bIns="45720" anchor="ctr" anchorCtr="0" wrap="square">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle>
+            <a:lvl1pPr marL="0" indent="0" algn="ctr">
+              <a:lnSpc>
+                <a:spcPct val="100000"/>
+              </a:lnSpc>
+              <a:buNone/>
+              <a:defRPr sz="4000" kern="1200">
+                <a:solidFill>
+                  <a:schemeClr val="lt1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+              </a:defRPr>
+            </a:lvl1pPr>
+          </a:lstStyle>
+          <a:p/>
+        </p:txBody>
+      </p:sp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMap bg1="dk1" tx1="lt1" bg2="dk2" tx2="lt2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" hlink="hlink" folHlink="folHlink"/>
+  <p:sldLayoutIdLst>
+    <p:sldLayoutId id="2147483649" r:id="rId1"/>
+    <p:sldLayoutId id="2147483650" r:id="rId2"/>
+  </p:sldLayoutIdLst>
+  <p:txStyles>
+    <p:titleStyle>
+      <a:lvl1pPr marL="0" indent="0" algn="ctr" rtl="0">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:buNone/>
+        <a:defRPr sz="4400" kern="1200">
+          <a:solidFill>
+            <a:schemeClr val="lt1"/>
+          </a:solidFill>
+          <a:latin typeface="+mj-lt"/>
+        </a:defRPr>
+      </a:lvl1pPr>
+    </p:titleStyle>
+    <p:bodyStyle>
+      <a:lvl1pPr marL="0" indent="0" algn="ctr" rtl="0">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:buNone/>
+        <a:defRPr sz="4000" kern="1200">
+          <a:solidFill>
+            <a:schemeClr val="lt1"/>
+          </a:solidFill>
+          <a:latin typeface="+mn-lt"/>
+        </a:defRPr>
+      </a:lvl1pPr>
+    </p:bodyStyle>
+    <p:otherStyle>
+      <a:lvl1pPr marL="0" indent="0" algn="ctr" rtl="0">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:buNone/>
+        <a:defRPr sz="2400" kern="1200">
+          <a:solidFill>
+            <a:schemeClr val="lt1"/>
+          </a:solidFill>
+          <a:latin typeface="+mn-lt"/>
+        </a:defRPr>
+      </a:lvl1pPr>
+    </p:otherStyle>
+  </p:txStyles>
+</p:sldMaster>
